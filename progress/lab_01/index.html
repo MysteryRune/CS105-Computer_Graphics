@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <title>CS105.O22.KHCL</title>
+        <link rel="stylesheet" href="style/main.css" type="text/css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="heading">
+                <h1 class="text-align-center">Computer Graphic - Rasterization</h1>
+                <h3 class="text-align-center">UIT - Huy Pham Bui Nhat - 20521410</h3>
+                <div>
+                    <b>Guidelines:</b>
+                    <div>
+                        * To draw the Line:
+                        <div class="tab">
+                            - Step 1: Select the algorithm for draw the Line.<br>
+                            - Step 2: Click mouse on canvas to set point (1st click to set Point A, 2nd to set Point B). <br>
+                            <i>After 2nd click, system will automatically draw a line, which connect Point A to Point B.</i>
+                        </div>
+                    </div>
+                    <div>
+                        * To draw the Circle:
+                        <div class="tab">
+                            - Step 1: Select the algorithm for draw the Circle.<br>
+                            - Step 2: Modify the radius which you want to draw the Circle by using slider or button `-` or `+`. <br>
+                            - Step 3: Click mouse on canvas to set the center point. <br>
+                            <i>After set the center point, system will automatically draw the Circle by following the center point and the radius which are gave by user.</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="horizontal-container">
+                <div class="buttons">
+                    <button id="reset">Reset</button>
+                </div>
+                <select id="algorithm">
+                    <option value="DDA">(Line) DDA algorithm</option>
+                    <option value="Bresenham">(Line) Bresenham algorithm</option>
+                    <option value="CircleMidpoint">(Circle) Mid-Point algorithm</option>
+                </select>
+                <div id="radius-input-container" class="vertical-container" style="display: none;">
+                    <div class="horizontal-container">
+                        <label id="radius-label" for="radius-slider">Radius: </label>
+                        <span id="radius-value" class="slider-value">1</span>
+                    </div>
+                    <div class="horizontal-container">
+                        <input type="range" id="radius-slider" name="slider" min="1" max="800" value="1" class="slider">
+                        <button id="decrease-slider-value-button">-</button>
+                        <button id="increase-slider-value-button">+</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main-container">
+                <canvas id="canvas"></canvas>
+            </div>
+
+            <script type="module" src="src/main.js"></script>
+        </div>
+    </body>
+</html>
