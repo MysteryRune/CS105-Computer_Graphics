@@ -1,1 +1,1 @@
-# :globe_with_meridians: [Vie](./readme.md)
+# :globe_with_meridians: [Vie](./README.md)
