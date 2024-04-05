@@ -8,4 +8,4 @@
 
 Chúng ta sử dụng `HTML`, `CSS` và `JavaScript` ở mức độ cơ bản để viết chương trình với giao diện tương tác người dùng cơ bản.
 
-[Demo](https://raw.githack.com/MysteryRune/CS105-Computer_Graphics/main/progress/lab_01/index.html) for this lab.
+[Demo](https://raw.githack.com/MysteryRune/CS105-Computer_Graphics/main/progress/lab_01/index.html) cho bài lab.
