@@ -1,7 +1,11 @@
 # :globe_with_meridians: [Vie](./README.md)
-[return](../lab_02/)
+[return](../lab_01/)
 
-Trong bài lab này, chúng ta sẽ thử tạo ra một số vật thể 3 chiều (3D object) với thư viện [Three.js](https://threejs.org/).
-Theo đường dẫn URL trong tệp [`link to guideline.txt`](link%20to%20guideline.txt) để học các tương tác cơ bản với [Three.js](https://threejs.org/).
+Ở bài lab này, chúng ta sẽ tạo một chương trình cho một số thuật toán cơ bản về đồ họa Raster (Rasterization Graphics):
+1. [DDA - Thuật toán vẽ đường thẳng](https://www.geeksforgeeks.org/dda-line-generation-algorithm-computer-graphics/)
+2. [Bresenham's line - Thuật toán vẽ đường thẳng](https://www.geeksforgeeks.org/bresenhams-line-generation-algorithm/)
+3. [Mid-point circle - Thuật toán vẽ đường tròn](https://www.geeksforgeeks.org/mid-point-circle-drawing-algorithm/)
 
-[Demo](https://raw.githack.com/MysteryRune/CS105-Computer_Graphics/main/progress/lab_02/index.html) cho bài lab.
+Chúng ta sử dụng `HTML`, `CSS` và `JavaScript` ở mức độ cơ bản để viết chương trình với giao diện tương tác người dùng cơ bản.
+
+[Demo](https://raw.githack.com/MysteryRune/CS105-Computer_Graphics/main/progress/lab_01/index.html) for this lab.
