@@ -1,2 +1,2 @@
 # :globe_with_meridians: [Vie](./README.md)
-[return](..)
+[return](../lab_02/)
