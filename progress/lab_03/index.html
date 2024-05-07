@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <title>CS105.O22.KHCL</title>
+        <link rel="stylesheet" href="style/main.css" type="text/css">
+	</head>
+	<body>
+        <div class="container">
+            <div class="heading">
+                <h1 class="text-align-center">Computer Graphic - 3D Geometry, Affine Transformation, Viewing Transformation</h1>
+                <h3 class="text-align-center">UIT - Huy Pham Bui Nhat - 20521410</h3>
+                <a href="https://github.com/MysteryRune/CS105-Computer_Graphics/tree/main/progress/lab_03">Return to Home</a>
+            </div>
+            <div id="properties_object" class="horizontal-container">
+                <div id="angle-input-container" class="vertical-container">
+                    <div class="horizontal-container">
+                        <label id="angle-x-axis-label">Rotate x-axis: </label>
+                        <span id="angle-x-axis-value" class="angle-value">0</span>
+                        <button id="decrease-angle-x-axis-value-button">-</button>
+                        <button id="increase-angle-x-axis-value-button">+</button>
+                    </div>
+                    <div class="horizontal-container">
+                        <label id="angle-y-axis-label">Rotate y-axis: </label>
+                        <span id="angle-y-axis-value" class="angle-value">0</span>
+                        <button id="decrease-angle-y-axis-value-button">-</button>
+                        <button id="increase-angle-y-axis-value-button">+</button>
+                    </div>
+                    <div class="horizontal-container">
+                        <label id="angle-z-axis-label">Rotate z-axis: </label>
+                        <span id="angle-z-axis-value" class="angle-value">0</span>
+                        <button id="decrease-angle-z-axis-value-button">-</button>
+                        <button id="increase-angle-z-axis-value-button">+</button>
+                    </div>
+                </div>
+                <div id="transition-input-container" class="vertical-container">
+                    <div class="horizontal-container">
+                        <label id="transition-x-axis-label">Transit x-axis: </label>
+                        <span id="transition-x-axis-value" class="transition-value">0</span>
+                        <button id="decrease-transition-x-axis-value-button">-</button>
+                        <button id="increase-transition-x-axis-value-button">+</button>
+                    </div>
+                    <div class="horizontal-container">
+                        <label id="transition-y-axis-label">Transit y-axis: </label>
+                        <span id="transition-y-axis-value" class="transition-value">0</span>
+                        <button id="decrease-transition-y-axis-value-button">-</button>
+                        <button id="increase-transition-y-axis-value-button">+</button>
+                    </div>
+                    <div class="horizontal-container">
+                        <label id="transition-z-axis-label">Transit z-axis: </label>
+                        <span id="transition-z-axis-value" class="transition-value">0</span>
+                        <button id="decrease-transition-z-axis-value-button">-</button>
+                        <button id="increase-transition-z-axis-value-button">+</button>
+                    </div>
+                </div>
+                <div id="scale-input-container" class="vertical-container">
+                    <div class="horizontal-container">
+                        <label id="scale-x-axis-label">Scale x-axis: </label>
+                        <span id="scale-x-axis-value" class="scale-value">1.0</span>
+                        <button id="decrease-scale-x-axis-value-button">-</button>
+                        <button id="increase-scale-x-axis-value-button">+</button>
+                    </div>
+                    <div class="horizontal-container">
+                        <label id="scale-y-axis-label">Scale y-axis: </label>
+                        <span id="scale-y-axis-value" class="scale-value">1.0</span>
+                        <button id="decrease-scale-y-axis-value-button">-</button>
+                        <button id="increase-scale-y-axis-value-button">+</button>
+                    </div>
+                    <div class="horizontal-container">
+                        <label id="scale-z-axis-label">Scale z-axis: </label>
+                        <span id="scale-z-axis-value" class="scale-value">1.0</span>
+                        <button id="decrease-scale-z-axis-value-button">-</button>
+                        <button id="increase-scale-z-axis-value-button">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span>Object:</span>
+        <select id="object-type">
+            <option value="Cube">Cube</option>
+            <option value="Cone">Cone</option>
+            <option value="Ball">Ball</option>
+        </select>
+
+        <span>Unit:</span>
+        <select id="unit">
+            <option value="0.1">0.1</option>
+            <option value="1">1</option>
+            <option value="10">10</option>
+        </select>
+
+        <div class="horizontal-container" id="nearfar">
+            <div id="near">Near:
+                <input type="range" id="nearSlider" min="0.1" max="50" step="0.1" value="0.1">
+                <span id="nearPer">100%</span>
+            </div>
+            <div id="far">Far:
+                <input type="range" id="farSlider" min="1" max="100" step="1" value="100">
+                <span id="farPer">100%</span>
+            </div>
+        </div>
+        <div id="webgl"></div>
+        <script type="importmap">
+            {
+                "imports": {
+                  "three": "https://unpkg.com/three@v0.162.0/build/three.module.js",
+                  "three/addons/": "https://unpkg.com/three@v0.162.0/examples/jsm/"
+                }
+            }
+        </script>
+		<script type="module" src="src/main.js"></script>
+	</body>
+</html>
