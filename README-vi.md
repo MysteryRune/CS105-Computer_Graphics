@@ -1,5 +1,5 @@
-# :globe_with_meridians: [Vie](../)
-[Quay lại trang chính](../)
+# :globe_with_meridians: [Vie](../../)
+[Quay lại trang chính](../../)
 
 # CS105 - Đồ họa Máy tính
 

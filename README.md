@@ -1,5 +1,5 @@
 # :globe_with_meridians: [Eng](./README-vi.md)
-[return home](../)
+[return home](../../)
 
 # CS105-Computer_Graphics
 
