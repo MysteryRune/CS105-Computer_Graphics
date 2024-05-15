@@ -1,7 +1,7 @@
 # :globe_with_meridians: [Eng](./README-vi.md)
 [return home](../../)
 
-# CS105-Computer_Graphics
+# CS105 - Computer Graphics
 
 ## Information
 > - Full name: Huy Pham Bui Nhat
