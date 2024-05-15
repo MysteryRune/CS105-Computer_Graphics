@@ -654,14 +654,20 @@ function change_object() {
 	let transitionXaxisValue = document.getElementById("transition-x-axis-value");
 	let transitionYaxisValue = document.getElementById("transition-y-axis-value");
 	let transitionZaxisValue = document.getElementById("transition-z-axis-value");
+	let scaleValueX = document.getElementById("scale-x-axis-value");
+	let scaleValueY = document.getElementById("scale-y-axis-value");
+	let scaleValueZ = document.getElementById("scale-z-axis-value");
 
 	// console.log(object[0].rotation.x);
-	angleXaxisValue.textContent = Math.round(object[0].rotation.x*180/Math.PI);
-	angleYaxisValue.textContent = Math.round(object[0].rotation.y*180/Math.PI);
-	angleZaxisValue.textContent = Math.round(object[0].rotation.z*180/Math.PI);
+	angleXaxisValue.textContent = parseFloat(object[0].rotation.x*180/Math.PI).toFixed(1);
+	angleYaxisValue.textContent = parseFloat(object[0].rotation.y*180/Math.PI).toFixed(1);
+	angleZaxisValue.textContent = parseFloat(object[0].rotation.z*180/Math.PI).toFixed(1);
 	transitionXaxisValue.textContent = object[0].position.x;
 	transitionYaxisValue.textContent = object[0].position.y;
 	transitionZaxisValue.textContent = object[0].position.z;
+	scaleValueX.textContent = parseFloat(object[0].scale.x).toFixed(1);
+	scaleValueY.textContent = parseFloat(object[0].scale.y).toFixed(1);
+	scaleValueZ.textContent = parseFloat(object[0].scale.z).toFixed(1);
 
 }
 function get_object() {
