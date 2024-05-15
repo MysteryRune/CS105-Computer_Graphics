@@ -24,31 +24,166 @@ var decreaseButtonScaleYaxisValue = document.getElementById("decrease-scale-y-ax
 var increaseButtonScaleYaxisValue = document.getElementById("increase-scale-y-axis-value-button");
 var decreaseButtonScaleZaxisValue = document.getElementById("decrease-scale-z-axis-value-button");
 var increaseButtonScaleZaxisValue = document.getElementById("increase-scale-z-axis-value-button");
+var decreaseButtonVrpXaxisValue = document.getElementById("decrease-vrp-x-axis-value-button");
+var increaseButtonVrpXaxisValue = document.getElementById("increase-vrp-x-axis-value-button");
+var decreaseButtonVrpYaxisValue = document.getElementById("decrease-vrp-y-axis-value-button");
+var increaseButtonVrpYaxisValue = document.getElementById("increase-vrp-y-axis-value-button");
+var decreaseButtonVrpZaxisValue = document.getElementById("decrease-vrp-z-axis-value-button");
+var increaseButtonVrpZaxisValue = document.getElementById("increase-vrp-z-axis-value-button");
+var decreaseButtonLookAtXaxisValue = document.getElementById("decrease-look-at-x-axis-value-button");
+var increaseButtonLookAtXaxisValue = document.getElementById("increase-look-at-x-axis-value-button");
+var decreaseButtonLookAtYaxisValue = document.getElementById("decrease-look-at-y-axis-value-button");
+var increaseButtonLookAtYaxisValue = document.getElementById("increase-look-at-y-axis-value-button");
+var decreaseButtonLookAtZaxisValue = document.getElementById("decrease-look-at-z-axis-value-button");
+var increaseButtonLookAtZaxisValue = document.getElementById("increase-look-at-z-axis-value-button");
 
-decreaseButtonAngleXaxisValue.addEventListener("click", decrease_button_angle_x_axis_value_clicked, false);
-increaseButtonAngleXaxisValue.addEventListener("click", increase_button_angle_x_axis_value_clicked, false);
-decreaseButtonAngleYaxisValue.addEventListener("click", decrease_button_angle_y_axis_value_clicked, false);
-increaseButtonAngleYaxisValue.addEventListener("click", increase_button_angle_y_axis_value_clicked, false);
-decreaseButtonAngleZaxisValue.addEventListener("click", decrease_button_angle_z_axis_value_clicked, false);
-increaseButtonAngleZaxisValue.addEventListener("click", increase_button_angle_z_axis_value_clicked, false);
-decreaseButtonTransitionXaxisValue.addEventListener("click", decrease_button_transition_x_axis_value_clicked, false);
-increaseButtonTransitionXaxisValue.addEventListener("click", increase_button_transition_x_axis_value_clicked, false);
-decreaseButtonTransitionYaxisValue.addEventListener("click", decrease_button_transition_y_axis_value_clicked, false);
-increaseButtonTransitionYaxisValue.addEventListener("click", increase_button_transition_y_axis_value_clicked, false);
-decreaseButtonTransitionZaxisValue.addEventListener("click", decrease_button_transition_z_axis_value_clicked, false);
-increaseButtonTransitionZaxisValue.addEventListener("click", increase_button_transition_z_axis_value_clicked, false);
-decreaseButtonScaleXaxisValue.addEventListener("click", decrease_button_scale_x_axis_value_clicked, false);
-increaseButtonScaleXaxisValue.addEventListener("click", increase_button_scale_x_axis_value_clicked, false);
-decreaseButtonScaleYaxisValue.addEventListener("click", decrease_button_scale_y_axis_value_clicked, false);
-increaseButtonScaleYaxisValue.addEventListener("click", increase_button_scale_y_axis_value_clicked, false);
-decreaseButtonScaleZaxisValue.addEventListener("click", decrease_button_scale_z_axis_value_clicked, false);
-increaseButtonScaleZaxisValue.addEventListener("click", increase_button_scale_z_axis_value_clicked, false);
+var intervalID;
+
+// decreaseButtonAngleXaxisValue.addEventListener("click", decrease_button_angle_x_axis_value_clicked, false);
+decreaseButtonAngleXaxisValue.addEventListener("mousedown", decrease_button_angle_x_axis_value_mousedown, false);
+decreaseButtonAngleXaxisValue.addEventListener("mouseup", decrease_button_angle_x_axis_value_mouseup, false);
+decreaseButtonAngleXaxisValue.addEventListener("mouseleave", decrease_button_angle_x_axis_value_mouseup, false);
+
+// increaseButtonAngleXaxisValue.addEventListener("click", increase_button_angle_x_axis_value_clicked, false);
+increaseButtonAngleXaxisValue.addEventListener("mousedown", increase_button_angle_x_axis_value_mousedown, false);
+increaseButtonAngleXaxisValue.addEventListener("mouseup", increase_button_angle_x_axis_value_mouseup, false);
+increaseButtonAngleXaxisValue.addEventListener("mouseleave", increase_button_angle_x_axis_value_mouseup, false);
+
+// decreaseButtonAngleYaxisValue.addEventListener("click", decrease_button_angle_y_axis_value_clicked, false);
+decreaseButtonAngleYaxisValue.addEventListener("mousedown", decrease_button_angle_y_axis_value_mousedown, false);
+decreaseButtonAngleYaxisValue.addEventListener("mouseup", decrease_button_angle_y_axis_value_mouseup, false);
+decreaseButtonAngleYaxisValue.addEventListener("mouseleave", decrease_button_angle_y_axis_value_mouseup, false);
+
+// increaseButtonAngleYaxisValue.addEventListener("click", increase_button_angle_y_axis_value_clicked, false);
+increaseButtonAngleYaxisValue.addEventListener("mousedown", increase_button_angle_y_axis_value_mousedown, false);
+increaseButtonAngleYaxisValue.addEventListener("mouseup", increase_button_angle_y_axis_value_mouseup, false);
+increaseButtonAngleYaxisValue.addEventListener("mouseleave", increase_button_angle_y_axis_value_mouseup, false);
+
+// decreaseButtonAngleZaxisValue.addEventListener("click", decrease_button_angle_z_axis_value_clicked, false);
+decreaseButtonAngleZaxisValue.addEventListener("mousedown", decrease_button_angle_z_axis_value_mousedown, false);
+decreaseButtonAngleZaxisValue.addEventListener("mouseup", decrease_button_angle_z_axis_value_mouseup, false);
+decreaseButtonAngleZaxisValue.addEventListener("mouseleave", decrease_button_angle_z_axis_value_mouseup, false);
+
+// increaseButtonAngleZaxisValue.addEventListener("click", increase_button_angle_z_axis_value_clicked, false);
+increaseButtonAngleZaxisValue.addEventListener("mousedown", increase_button_angle_z_axis_value_mousedown, false);
+increaseButtonAngleZaxisValue.addEventListener("mouseup", increase_button_angle_z_axis_value_mouseup, false);
+increaseButtonAngleZaxisValue.addEventListener("mouseleave", increase_button_angle_z_axis_value_mouseup, false);
+
+// decreaseButtonTransitionXaxisValue.addEventListener("click", decrease_button_transition_x_axis_value_clicked, false);
+decreaseButtonTransitionXaxisValue.addEventListener("mousedown", decrease_button_transition_x_axis_value_mousedown, false);
+decreaseButtonTransitionXaxisValue.addEventListener("mouseup", decrease_button_transition_x_axis_value_mouseup, false);
+decreaseButtonTransitionXaxisValue.addEventListener("mouseleave", decrease_button_transition_x_axis_value_mouseup, false);
+
+// increaseButtonTransitionXaxisValue.addEventListener("click", increase_button_transition_x_axis_value_clicked, false);
+increaseButtonTransitionXaxisValue.addEventListener("mousedown", increase_button_transition_x_axis_value_mousedown, false);
+increaseButtonTransitionXaxisValue.addEventListener("mouseup", increase_button_transition_x_axis_value_mouseup, false);
+increaseButtonTransitionXaxisValue.addEventListener("mouseleave", increase_button_transition_x_axis_value_mouseup, false);
+
+// decreaseButtonTransitionYaxisValue.addEventListener("click", decrease_button_transition_y_axis_value_clicked, false);
+decreaseButtonTransitionYaxisValue.addEventListener("mousedown", decrease_button_transition_y_axis_value_mousedown, false);
+decreaseButtonTransitionYaxisValue.addEventListener("mouseup", decrease_button_transition_y_axis_value_mouseup, false);
+decreaseButtonTransitionYaxisValue.addEventListener("mouseleave", decrease_button_transition_y_axis_value_mouseup, false);
+
+// increaseButtonTransitionYaxisValue.addEventListener("click", increase_button_transition_y_axis_value_clicked, false);
+increaseButtonTransitionYaxisValue.addEventListener("mousedown", increase_button_transition_y_axis_value_mousedown, false);
+increaseButtonTransitionYaxisValue.addEventListener("mouseup", increase_button_transition_y_axis_value_mouseup, false);
+increaseButtonTransitionYaxisValue.addEventListener("mouseleave", increase_button_transition_y_axis_value_mouseup, false);
+
+// decreaseButtonTransitionZaxisValue.addEventListener("click", decrease_button_transition_z_axis_value_clicked, false);
+decreaseButtonTransitionZaxisValue.addEventListener("mousedown", decrease_button_transition_z_axis_value_mousedown, false);
+decreaseButtonTransitionZaxisValue.addEventListener("mouseup", decrease_button_transition_z_axis_value_mouseup, false);
+decreaseButtonTransitionZaxisValue.addEventListener("mouseleave", decrease_button_transition_z_axis_value_mouseup, false);
+
+// increaseButtonTransitionZaxisValue.addEventListener("click", increase_button_transition_z_axis_value_clicked, false);
+increaseButtonTransitionZaxisValue.addEventListener("mousedown", increase_button_transition_z_axis_value_mousedown, false);
+increaseButtonTransitionZaxisValue.addEventListener("mouseup", increase_button_transition_z_axis_value_mouseup, false);
+increaseButtonTransitionZaxisValue.addEventListener("mouseleave", increase_button_transition_z_axis_value_mouseup, false);
+
+// decreaseButtonScaleXaxisValue.addEventListener("click", decrease_button_scale_x_axis_value_clicked, false);
+decreaseButtonScaleXaxisValue.addEventListener("mousedown", decrease_button_scale_x_axis_value_mousedown, false);
+decreaseButtonScaleXaxisValue.addEventListener("mouseup", decrease_button_scale_x_axis_value_mouseup, false);
+decreaseButtonScaleXaxisValue.addEventListener("mouseleave", decrease_button_scale_x_axis_value_mouseup, false);
+
+// increaseButtonScaleXaxisValue.addEventListener("click", increase_button_scale_x_axis_value_clicked, false);
+increaseButtonScaleXaxisValue.addEventListener("mousedown", increase_button_scale_x_axis_value_mousedown, false);
+increaseButtonScaleXaxisValue.addEventListener("mouseup", increase_button_scale_x_axis_value_mouseup, false);
+increaseButtonScaleXaxisValue.addEventListener("mouseleave", increase_button_scale_x_axis_value_mouseup, false);
+
+// decreaseButtonScaleYaxisValue.addEventListener("click", decrease_button_scale_y_axis_value_clicked, false);
+decreaseButtonScaleYaxisValue.addEventListener("mousedown", decrease_button_scale_y_axis_value_mousedown, false);
+decreaseButtonScaleYaxisValue.addEventListener("mouseup", decrease_button_scale_y_axis_value_mouseup, false);
+decreaseButtonScaleYaxisValue.addEventListener("mouseleave", decrease_button_scale_y_axis_value_mouseup, false);
+
+
+// increaseButtonScaleYaxisValue.addEventListener("click", increase_button_scale_y_axis_value_clicked, false);
+increaseButtonScaleYaxisValue.addEventListener("mousedown", increase_button_scale_y_axis_value_mousedown, false);
+increaseButtonScaleYaxisValue.addEventListener("mouseup", increase_button_scale_y_axis_value_mouseup, false);
+increaseButtonScaleYaxisValue.addEventListener("mouseleave", increase_button_scale_y_axis_value_mouseup, false);
+
+// decreaseButtonScaleZaxisValue.addEventListener("click", decrease_button_scale_z_axis_value_clicked, false);
+decreaseButtonScaleZaxisValue.addEventListener("mousedown", decrease_button_scale_z_axis_value_mousedown, false);
+decreaseButtonScaleZaxisValue.addEventListener("mouseup", decrease_button_scale_z_axis_value_mouseup, false);
+decreaseButtonScaleZaxisValue.addEventListener("mouseleave", decrease_button_scale_z_axis_value_mouseup, false);
+
+// increaseButtonScaleZaxisValue.addEventListener("click", increase_button_scale_z_axis_value_clicked, false);
+increaseButtonScaleZaxisValue.addEventListener("mousedown", increase_button_scale_z_axis_value_mousedown, false);
+increaseButtonScaleZaxisValue.addEventListener("mouseup", increase_button_scale_z_axis_value_mouseup, false);
+increaseButtonScaleZaxisValue.addEventListener("mouseleave", increase_button_scale_z_axis_value_mouseup, false);
+
+decreaseButtonVrpXaxisValue.addEventListener("mousedown", decrease_button_vrp_x_axis_value_mousedown, false);
+decreaseButtonVrpXaxisValue.addEventListener("mouseup", decrease_button_vrp_x_axis_value_mouseup, false);
+decreaseButtonVrpXaxisValue.addEventListener("mouseleave", decrease_button_vrp_x_axis_value_mouseup, false);
+
+increaseButtonVrpXaxisValue.addEventListener("mousedown", increase_button_vrp_x_axis_value_mousedown, false);
+increaseButtonVrpXaxisValue.addEventListener("mouseup", increase_button_vrp_x_axis_value_mouseup, false);
+increaseButtonVrpXaxisValue.addEventListener("mouseleave", increase_button_vrp_x_axis_value_mouseup, false);
+
+decreaseButtonVrpYaxisValue.addEventListener("mousedown", decrease_button_vrp_y_axis_value_mousedown, false);
+decreaseButtonVrpYaxisValue.addEventListener("mouseup", decrease_button_vrp_y_axis_value_mouseup, false);
+decreaseButtonVrpYaxisValue.addEventListener("mouseleave", decrease_button_vrp_y_axis_value_mouseup, false);
+
+increaseButtonVrpYaxisValue.addEventListener("mousedown", increase_button_vrp_y_axis_value_mousedown, false);
+increaseButtonVrpYaxisValue.addEventListener("mouseup", increase_button_vrp_y_axis_value_mouseup, false);
+increaseButtonVrpYaxisValue.addEventListener("mouseleave", increase_button_vrp_y_axis_value_mouseup, false);
+
+decreaseButtonVrpZaxisValue.addEventListener("mousedown", decrease_button_vrp_z_axis_value_mousedown, false);
+decreaseButtonVrpZaxisValue.addEventListener("mouseup", decrease_button_vrp_z_axis_value_mouseup, false);
+decreaseButtonVrpZaxisValue.addEventListener("mouseleave", decrease_button_vrp_z_axis_value_mouseup, false);
+
+increaseButtonVrpZaxisValue.addEventListener("mousedown", increase_button_vrp_z_axis_value_mousedown, false);
+increaseButtonVrpZaxisValue.addEventListener("mouseup", increase_button_vrp_z_axis_value_mouseup, false);
+increaseButtonVrpZaxisValue.addEventListener("mouseleave", increase_button_vrp_z_axis_value_mouseup, false);
+
+decreaseButtonLookAtXaxisValue.addEventListener("mousedown", decrease_button_look_at_x_axis_value_mousedown, false);
+decreaseButtonLookAtXaxisValue.addEventListener("mouseup", decrease_button_look_at_x_axis_value_mouseup, false);
+decreaseButtonLookAtXaxisValue.addEventListener("mouseleave", decrease_button_look_at_x_axis_value_mouseup, false);
+
+increaseButtonLookAtXaxisValue.addEventListener("mousedown", increase_button_look_at_x_axis_value_mousedown, false);
+increaseButtonLookAtXaxisValue.addEventListener("mouseup", increase_button_look_at_x_axis_value_mouseup, false);
+increaseButtonLookAtXaxisValue.addEventListener("mouseleave", increase_button_look_at_x_axis_value_mouseup, false);
+
+decreaseButtonLookAtYaxisValue.addEventListener("mousedown", decrease_button_look_at_y_axis_value_mousedown, false);
+decreaseButtonLookAtYaxisValue.addEventListener("mouseup", decrease_button_look_at_y_axis_value_mouseup, false);
+decreaseButtonLookAtYaxisValue.addEventListener("mouseleave", decrease_button_look_at_y_axis_value_mouseup, false);
+
+increaseButtonLookAtYaxisValue.addEventListener("mousedown", increase_button_look_at_y_axis_value_mousedown, false);
+increaseButtonLookAtYaxisValue.addEventListener("mouseup", increase_button_look_at_y_axis_value_mouseup, false);
+increaseButtonLookAtYaxisValue.addEventListener("mouseleave", increase_button_look_at_y_axis_value_mouseup, false);
+
+decreaseButtonLookAtZaxisValue.addEventListener("mousedown", decrease_button_look_at_z_axis_value_mousedown, false);
+decreaseButtonLookAtZaxisValue.addEventListener("mouseup", decrease_button_look_at_z_axis_value_mouseup, false);
+decreaseButtonLookAtZaxisValue.addEventListener("mouseleave", decrease_button_look_at_z_axis_value_mouseup, false);
+
+increaseButtonLookAtZaxisValue.addEventListener("mousedown", increase_button_look_at_z_axis_value_mousedown, false);
+increaseButtonLookAtZaxisValue.addEventListener("mouseup", increase_button_look_at_z_axis_value_mouseup, false);
+increaseButtonLookAtZaxisValue.addEventListener("mouseleave", increase_button_look_at_z_axis_value_mouseup, false);
+
 objectSelectionDropBox.addEventListener("change", change_object, false);
 
 function decrease_button_angle_x_axis_value_clicked() {
 	let angleValue = document.getElementById("angle-x-axis-value");
 	let unit = document.getElementById("unit");
-    if (parseFloat(angleValue.textContent) - parseFloat(unit.value) >= 0) {
+    if (/*parseFloat(angleValue.textContent) - parseFloat(unit.value) >= 0*/true) {
 		let angleValue = document.getElementById("angle-x-axis-value");
     	angleValue.textContent = (parseFloat(angleValue.textContent) - parseFloat(unit.value)).toFixed(1);
 		object[0].rotation.x -= parseFloat(unit.value).toFixed(1)*Math.PI/180;
@@ -59,7 +194,7 @@ function decrease_button_angle_x_axis_value_clicked() {
 function decrease_button_angle_y_axis_value_clicked() {
 	let angleValue = document.getElementById("angle-y-axis-value");
 	let unit = document.getElementById("unit");
-    if (parseFloat(angleValue.textContent) - parseFloat(unit.value) >= 0) {
+    if (/*parseFloat(angleValue.textContent) - parseFloat(unit.value) >= 0*/true) {
 		let angleValue = document.getElementById("angle-y-axis-value");
     	angleValue.textContent = (parseFloat(angleValue.textContent) - parseFloat(unit.value)).toFixed(1);
 		object[0].rotation.y -= parseFloat(unit.value).toFixed(1)*Math.PI/180;
@@ -70,7 +205,7 @@ function decrease_button_angle_y_axis_value_clicked() {
 function decrease_button_angle_z_axis_value_clicked() {
 	let angleValue = document.getElementById("angle-z-axis-value");
 	let unit = document.getElementById("unit");
-    if (parseFloat(angleValue.textContent) - parseFloat(unit.value) >= 0) {
+    if (/*parseFloat(angleValue.textContent) - parseFloat(unit.value) >= 0*/true) {
 		let angleValue = document.getElementById("angle-z-axis-value");
     	angleValue.textContent = (parseFloat(angleValue.textContent) - parseFloat(unit.value)).toFixed(1);
 		object[0].rotation.z -= parseFloat(unit.value).toFixed(1)*Math.PI/180;
@@ -132,11 +267,65 @@ function decrease_button_scale_z_axis_value_clicked() {
 	object[1].scale.set(parseFloat(scaleValueX.textContent), parseFloat(scaleValueY.textContent), parseFloat(scaleValueZ.textContent));
 	update_scence();
 }
+function decrease_button_vrp_x_axis_value_clicked() {
+	let vrpValueX = document.getElementById("vrp-x-axis-value");
+	let vrpValueY = document.getElementById("vrp-y-axis-value");
+	let vrpValueZ = document.getElementById("vrp-z-axis-value");
+	let unit = document.getElementById("unit");
+	vrpValueX.textContent = (parseFloat(vrpValueX.textContent) - parseFloat(unit.value)).toFixed(1);
+	camera.position.set(parseFloat(vrpValueX.textContent), parseFloat(vrpValueY.textContent), parseFloat(vrpValueZ.textContent))
+	update_scence();
+}
+function decrease_button_vrp_y_axis_value_clicked() {
+	let vrpValueX = document.getElementById("vrp-x-axis-value");
+	let vrpValueY = document.getElementById("vrp-y-axis-value");
+	let vrpValueZ = document.getElementById("vrp-z-axis-value");
+	let unit = document.getElementById("unit");
+	vrpValueY.textContent = (parseFloat(vrpValueY.textContent) - parseFloat(unit.value)).toFixed(1);
+	camera.position.set(parseFloat(vrpValueX.textContent), parseFloat(vrpValueY.textContent), parseFloat(vrpValueZ.textContent))
+	update_scence();
+}
+function decrease_button_vrp_z_axis_value_clicked() {
+	let vrpValueX = document.getElementById("vrp-x-axis-value");
+	let vrpValueY = document.getElementById("vrp-y-axis-value");
+	let vrpValueZ = document.getElementById("vrp-z-axis-value");
+	let unit = document.getElementById("unit");
+	vrpValueZ.textContent = (parseFloat(vrpValueZ.textContent) - parseFloat(unit.value)).toFixed(1);
+	camera.position.set(parseFloat(vrpValueX.textContent), parseFloat(vrpValueY.textContent), parseFloat(vrpValueZ.textContent))
+	update_scence();
+}
+function decrease_button_look_at_x_axis_value_clicked() {
+	let lookAtValueX = document.getElementById("look-at-x-axis-value");
+	let lookAtValueY = document.getElementById("look-at-y-axis-value");
+	let lookAtValueZ = document.getElementById("look-at-z-axis-value");
+	let unit = document.getElementById("unit");
+	lookAtValueX.textContent = (parseFloat(lookAtValueX.textContent) - parseFloat(unit.value)).toFixed(1);
+	camera.lookAt(parseFloat(lookAtValueX.textContent), parseFloat(lookAtValueY.textContent), parseFloat(lookAtValueZ.textContent));
+	update_scence();
+}
+function decrease_button_look_at_y_axis_value_clicked() {
+	let lookAtValueX = document.getElementById("look-at-x-axis-value");
+	let lookAtValueY = document.getElementById("look-at-y-axis-value");
+	let lookAtValueZ = document.getElementById("look-at-z-axis-value");
+	let unit = document.getElementById("unit");
+	lookAtValueY.textContent = (parseFloat(lookAtValueY.textContent) - parseFloat(unit.value)).toFixed(1);
+	camera.lookAt(parseFloat(lookAtValueX.textContent), parseFloat(lookAtValueY.textContent), parseFloat(lookAtValueZ.textContent));
+	update_scence();
+}
+function decrease_button_look_at_z_axis_value_clicked() {
+	let lookAtValueX = document.getElementById("look-at-x-axis-value");
+	let lookAtValueY = document.getElementById("look-at-y-axis-value");
+	let lookAtValueZ = document.getElementById("look-at-z-axis-value");
+	let unit = document.getElementById("unit");
+	lookAtValueZ.textContent = (parseFloat(lookAtValueZ.textContent) - parseFloat(unit.value)).toFixed(1);
+	camera.lookAt(parseFloat(lookAtValueX.textContent), parseFloat(lookAtValueY.textContent), parseFloat(lookAtValueZ.textContent));
+	update_scence();
+}
 
 function increase_button_angle_x_axis_value_clicked() {
     let angleValue = document.getElementById("angle-x-axis-value");
 	let unit = document.getElementById("unit");
-    if (parseFloat(angleValue.textContent) + parseFloat(unit.value) <= 360) {
+    if (/*parseFloat(angleValue.textContent) + parseFloat(unit.value) <= 360*/true) {
 		let angleValue = document.getElementById("angle-x-axis-value");
     	angleValue.textContent = (parseFloat(angleValue.textContent) + parseFloat(unit.value)).toFixed(1);
 		object[0].rotation.x += parseFloat(unit.value).toFixed(1)*Math.PI/180;
@@ -147,7 +336,7 @@ function increase_button_angle_x_axis_value_clicked() {
 function increase_button_angle_y_axis_value_clicked() {
     let angleValue = document.getElementById("angle-y-axis-value");
 	let unit = document.getElementById("unit");
-    if (parseFloat(angleValue.textContent) + parseFloat(unit.value) <= 360) {
+    if (/*parseFloat(angleValue.textContent) + parseFloat(unit.value) <= 360*/true) {
 		let angleValue = document.getElementById("angle-y-axis-value");
     	angleValue.textContent = (parseFloat(angleValue.textContent) + parseFloat(unit.value)).toFixed(1);
 		object[0].rotation.y += parseFloat(unit.value).toFixed(1)*Math.PI/180;
@@ -158,7 +347,7 @@ function increase_button_angle_y_axis_value_clicked() {
 function increase_button_angle_z_axis_value_clicked() {
     let angleValue = document.getElementById("angle-z-axis-value");
 	let unit = document.getElementById("unit");
-    if (parseFloat(angleValue.textContent) + parseFloat(unit.value) <= 360) {
+    if (/*parseFloat(angleValue.textContent) + parseFloat(unit.value) <= 360*/true) {
 		let angleValue = document.getElementById("angle-z-axis-value");
     	angleValue.textContent = (parseFloat(angleValue.textContent) + parseFloat(unit.value)).toFixed(1);
 		object[0].rotation.z += parseFloat(unit.value).toFixed(1)*Math.PI/180;
@@ -219,6 +408,242 @@ function increase_button_scale_z_axis_value_clicked() {
 	object[0].scale.set(parseFloat(scaleValueX.textContent), parseFloat(scaleValueY.textContent), parseFloat(scaleValueZ.textContent));
 	object[1].scale.set(parseFloat(scaleValueX.textContent), parseFloat(scaleValueY.textContent), parseFloat(scaleValueZ.textContent));
 	update_scence();
+}
+function increase_button_vrp_x_axis_value_clicked() {
+	let vrpValueX = document.getElementById("vrp-x-axis-value");
+	let vrpValueY = document.getElementById("vrp-y-axis-value");
+	let vrpValueZ = document.getElementById("vrp-z-axis-value");
+	let unit = document.getElementById("unit");
+	vrpValueX.textContent = (parseFloat(vrpValueX.textContent) + parseFloat(unit.value)).toFixed(1);
+	camera.position.set(parseFloat(vrpValueX.textContent), parseFloat(vrpValueY.textContent), parseFloat(vrpValueZ.textContent))
+	update_scence();
+}
+function increase_button_vrp_y_axis_value_clicked() {
+	let vrpValueX = document.getElementById("vrp-x-axis-value");
+	let vrpValueY = document.getElementById("vrp-y-axis-value");
+	let vrpValueZ = document.getElementById("vrp-z-axis-value");
+	let unit = document.getElementById("unit");
+	vrpValueY.textContent = (parseFloat(vrpValueY.textContent) + parseFloat(unit.value)).toFixed(1);
+	camera.position.set(parseFloat(vrpValueX.textContent), parseFloat(vrpValueY.textContent), parseFloat(vrpValueZ.textContent))
+	update_scence();
+}
+function increase_button_vrp_z_axis_value_clicked() {
+	let vrpValueX = document.getElementById("vrp-x-axis-value");
+	let vrpValueY = document.getElementById("vrp-y-axis-value");
+	let vrpValueZ = document.getElementById("vrp-z-axis-value");
+	let unit = document.getElementById("unit");
+	vrpValueZ.textContent = (parseFloat(vrpValueZ.textContent) + parseFloat(unit.value)).toFixed(1);
+	camera.position.set(parseFloat(vrpValueX.textContent), parseFloat(vrpValueY.textContent), parseFloat(vrpValueZ.textContent))
+	update_scence();
+}
+function increase_button_look_at_x_axis_value_clicked() {
+	let lookAtValueX = document.getElementById("look-at-x-axis-value");
+	let lookAtValueY = document.getElementById("look-at-y-axis-value");
+	let lookAtValueZ = document.getElementById("look-at-z-axis-value");
+	let unit = document.getElementById("unit");
+	lookAtValueX.textContent = (parseFloat(lookAtValueX.textContent) + parseFloat(unit.value)).toFixed(1);
+	camera.lookAt(parseFloat(lookAtValueX.textContent), parseFloat(lookAtValueY.textContent), parseFloat(lookAtValueZ.textContent));
+	update_scence();
+}
+function increase_button_look_at_y_axis_value_clicked() {
+	let lookAtValueX = document.getElementById("look-at-x-axis-value");
+	let lookAtValueY = document.getElementById("look-at-y-axis-value");
+	let lookAtValueZ = document.getElementById("look-at-z-axis-value");
+	let unit = document.getElementById("unit");
+	lookAtValueY.textContent = (parseFloat(lookAtValueY.textContent) + parseFloat(unit.value)).toFixed(1);
+	camera.lookAt(parseFloat(lookAtValueX.textContent), parseFloat(lookAtValueY.textContent), parseFloat(lookAtValueZ.textContent));
+	update_scence();
+}
+function increase_button_look_at_z_axis_value_clicked() {
+	let lookAtValueX = document.getElementById("look-at-x-axis-value");
+	let lookAtValueY = document.getElementById("look-at-y-axis-value");
+	let lookAtValueZ = document.getElementById("look-at-z-axis-value");
+	let unit = document.getElementById("unit");
+	lookAtValueZ.textContent = (parseFloat(lookAtValueZ.textContent) + parseFloat(unit.value)).toFixed(1);
+	camera.lookAt(parseFloat(lookAtValueX.textContent), parseFloat(lookAtValueY.textContent), parseFloat(lookAtValueZ.textContent));
+	update_scence();
+}
+
+function decrease_button_angle_x_axis_value_mousedown() {
+	intervalID = setInterval(decrease_button_angle_x_axis_value_clicked, 100);
+}
+function decrease_button_angle_x_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function decrease_button_angle_y_axis_value_mousedown() {
+	intervalID = setInterval(decrease_button_angle_y_axis_value_clicked, 100);
+}
+function decrease_button_angle_y_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function decrease_button_angle_z_axis_value_mousedown() {
+	intervalID = setInterval(decrease_button_angle_z_axis_value_clicked, 100);
+}
+function decrease_button_angle_z_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function decrease_button_transition_x_axis_value_mousedown() {
+	intervalID = setInterval(decrease_button_transition_x_axis_value_clicked, 100);
+}
+function decrease_button_transition_x_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function decrease_button_transition_y_axis_value_mousedown() {
+	intervalID = setInterval(decrease_button_transition_y_axis_value_clicked, 100);
+}
+function decrease_button_transition_y_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function decrease_button_transition_z_axis_value_mousedown() {
+	intervalID = setInterval(decrease_button_transition_z_axis_value_clicked, 100);
+}
+function decrease_button_transition_z_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function decrease_button_scale_x_axis_value_mousedown() {
+	intervalID = setInterval(decrease_button_scale_x_axis_value_clicked, 100);
+}
+function decrease_button_scale_x_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function decrease_button_scale_y_axis_value_mousedown() {
+	intervalID = setInterval(decrease_button_scale_y_axis_value_clicked, 100);
+}
+function decrease_button_scale_y_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function decrease_button_scale_z_axis_value_mousedown() {
+	intervalID = setInterval(decrease_button_scale_z_axis_value_clicked, 100);
+}
+function decrease_button_scale_z_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function decrease_button_vrp_x_axis_value_mousedown() {
+	intervalID = setInterval(decrease_button_vrp_x_axis_value_clicked, 100);
+}
+function decrease_button_vrp_x_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function decrease_button_vrp_y_axis_value_mousedown() {
+	intervalID = setInterval(decrease_button_vrp_y_axis_value_clicked, 100);
+}
+function decrease_button_vrp_y_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function decrease_button_vrp_z_axis_value_mousedown() {
+	intervalID = setInterval(decrease_button_vrp_z_axis_value_clicked, 100);
+}
+function decrease_button_vrp_z_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function decrease_button_look_at_x_axis_value_mousedown() {
+	intervalID = setInterval(decrease_button_look_at_x_axis_value_clicked, 100);
+}
+function decrease_button_look_at_x_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function decrease_button_look_at_y_axis_value_mousedown() {
+	intervalID = setInterval(decrease_button_look_at_y_axis_value_clicked, 100);
+}
+function decrease_button_look_at_y_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function decrease_button_look_at_z_axis_value_mousedown() {
+	intervalID = setInterval(decrease_button_look_at_z_axis_value_clicked, 100);
+}
+function decrease_button_look_at_z_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+
+function increase_button_angle_x_axis_value_mousedown() {
+	intervalID = setInterval(increase_button_angle_x_axis_value_clicked, 100);
+}
+function increase_button_angle_x_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function increase_button_angle_y_axis_value_mousedown() {
+	intervalID = setInterval(increase_button_angle_y_axis_value_clicked, 100);
+}
+function increase_button_angle_y_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function increase_button_angle_z_axis_value_mousedown() {
+	intervalID = setInterval(increase_button_angle_z_axis_value_clicked, 100);
+}
+function increase_button_angle_z_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function increase_button_transition_x_axis_value_mousedown() {
+	intervalID = setInterval(increase_button_transition_x_axis_value_clicked, 100);
+}
+function increase_button_transition_x_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function increase_button_transition_y_axis_value_mousedown() {
+	intervalID = setInterval(increase_button_transition_y_axis_value_clicked, 100);
+}
+function increase_button_transition_y_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function increase_button_transition_z_axis_value_mousedown() {
+	intervalID = setInterval(increase_button_transition_z_axis_value_clicked, 100);
+}
+function increase_button_transition_z_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function increase_button_scale_x_axis_value_mousedown() {
+	intervalID = setInterval(increase_button_scale_x_axis_value_clicked, 100);
+}
+function increase_button_scale_x_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function increase_button_scale_y_axis_value_mousedown() {
+	intervalID = setInterval(increase_button_scale_y_axis_value_clicked, 100);
+}
+function increase_button_scale_y_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function increase_button_scale_z_axis_value_mousedown() {
+	intervalID = setInterval(increase_button_scale_z_axis_value_clicked, 100);
+}
+function increase_button_scale_z_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function increase_button_vrp_x_axis_value_mousedown() {
+	intervalID = setInterval(increase_button_vrp_x_axis_value_clicked, 100);
+}
+function increase_button_vrp_x_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function increase_button_vrp_y_axis_value_mousedown() {
+	intervalID = setInterval(increase_button_vrp_y_axis_value_clicked, 100);
+}
+function increase_button_vrp_y_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function increase_button_vrp_z_axis_value_mousedown() {
+	intervalID = setInterval(increase_button_vrp_z_axis_value_clicked, 100);
+}
+function increase_button_vrp_z_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function increase_button_look_at_x_axis_value_mousedown() {
+	intervalID = setInterval(increase_button_look_at_x_axis_value_clicked, 100);
+}
+function increase_button_look_at_x_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function increase_button_look_at_y_axis_value_mousedown() {
+	intervalID = setInterval(increase_button_look_at_y_axis_value_clicked, 100);
+}
+function increase_button_look_at_y_axis_value_mouseup() {
+	clearInterval(intervalID);
+}
+function increase_button_look_at_z_axis_value_mousedown() {
+	intervalID = setInterval(increase_button_look_at_z_axis_value_clicked, 100);
+}
+function increase_button_look_at_z_axis_value_mouseup() {
+	clearInterval(intervalID);
 }
 
 function change_object() {
@@ -297,9 +722,10 @@ function update_scence() {
 }
 
 var [renderer, scene, camera] = init();
+const targetPosition = new THREE.Vector3(0, 0, 0);
 
-// var controls = new OrbitControls( camera, renderer.domElement );
-// controls.addEventListener( 'change', ()=>{renderer.render(scene, camera)} );
+var controls = new OrbitControls( camera, renderer.domElement );
+controls.addEventListener( 'change', ()=>{renderer.render(scene, camera)} );
 
 var originalNear = camera.near;
 document.getElementById('nearSlider').addEventListener('input', function() {
@@ -354,12 +780,12 @@ scene.add( line_cone_01 );
 const geometry_sphere = new THREE.SphereGeometry(2.5, 32, 16);
 const material_sphere = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
 const ball_01 = new THREE.Mesh( geometry_sphere, material_sphere );
-ball_01.position.set( 7, 3, 2 );
+ball_01.position.set( 7, 3, 0 );
 scene.add( ball_01 );
 const material_line_sphere = new THREE.LineBasicMaterial({ color: 0xff0000, linewidth: 1 })
 const edges_sphere = new THREE.EdgesGeometry( geometry_sphere ); 
 const line_ball_01 = new THREE.LineSegments(edges_sphere, material_line_sphere ); 
-line_ball_01.position.set( 7, 3, 2 );
+line_ball_01.position.set( 7, 3, 0 );
 scene.add( line_ball_01 );
 
 update_scence();
@@ -368,7 +794,25 @@ object = [cube_01, line_cube_01];
 
 
 function render() {
-    // Update camera projection matrix if needed
+
+	let vrpValueX = document.getElementById("vrp-x-axis-value");
+	let vrpValueY = document.getElementById("vrp-y-axis-value");
+	let vrpValueZ = document.getElementById("vrp-z-axis-value");
+	vrpValueX.textContent = camera.position.x.toFixed(1);
+	vrpValueY.textContent = camera.position.y.toFixed(1);
+	vrpValueZ.textContent = camera.position.z.toFixed(1);
+
+	let lookAtValueX = document.getElementById("look-at-x-axis-value");
+	let lookAtValueY = document.getElementById("look-at-y-axis-value");
+	let lookAtValueZ = document.getElementById("look-at-z-axis-value");
+	// lookAtValueX.textContent = lookDirection.x.toFixed(1);
+	// lookAtValueY.textContent = lookDirection.y.toFixed(1);
+	// lookAtValueZ.textContent = lookDirection.z.toFixed(1);
+	camera.lookAt(	parseFloat(lookAtValueX.textContent).toFixed(1),
+					parseFloat(lookAtValueY.textContent).toFixed(1),
+					parseFloat(lookAtValueZ.textContent).toFixed(1)	);
+
+	// Update camera projection matrix if needed
     camera.updateProjectionMatrix();
 
     // Render the scene

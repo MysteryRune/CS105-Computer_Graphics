@@ -23,6 +23,7 @@
 .vertical-container {
     display: inline-grid;
     align-items: left;
+    margin-bottom: 5px;
     gap: 10px;
 }
 
