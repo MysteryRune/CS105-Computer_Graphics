@@ -191,8 +191,8 @@ scene.add( ball_01 );
 const pointLight = new THREE.PointLight( 0xffffff, 1000, 0 );
 pointLight.position.set( 15, 15, 0 );
 pointLight.castShadow = true; // default false
-pointLight.shadow.mapSize.width = 1024;
-pointLight.shadow.mapSize.height = 1024;
+pointLight.shadow.mapSize.width = 2048;
+pointLight.shadow.mapSize.height = 2048;
 pointLight.shadow.bias = 0.001;
 
 scene.add( pointLight );
