@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <title>CS105.O22.KHCL</title>
+        <link rel="stylesheet" href="style/main.css" type="text/css">
+	</head>
+	<body>
+        <div class="container">
+            <div class="heading">
+                <h1 class="text-align-center">Computer Graphic - Lighting and  Texture</h1>
+                <h3 class="text-align-center">UIT - Huy Pham Bui Nhat - 20521410</h3>
+                <a href="https://github.com/MysteryRune/CS105-Computer_Graphics/tree/main/progress/lab_04">Return to Home</a>
+                <div class="tab">
+                    - Scroll your mouse to zoom in/zoom out the screen and see the texture in specifically.<br>
+                    - Click and Drag to interact to the canvas (The scene is showing).<br>
+                    - Hold `SHIFT`/`CTRL` key to move your Camera position.<br>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="cube-geometry" checked="true">Cube</input>
+            <input type="checkbox" id="cone-geometry">Cone</input>
+            <input type="checkbox" id="ball-geometry">Ball</input>
+        </div>
+        <!-- <span>Object:</span>
+        <select id="object-type">
+            <option value="Cube">Cube</option>
+            <option value="Cone">Cone</option>
+            <option value="Ball">Ball</option>
+        </select> -->
+
+        <div id="webgl"></div>
+        <script type="importmap">
+            {
+                "imports": {
+                  "three": "https://unpkg.com/three@v0.162.0/build/three.module.js",
+                  "three/addons/": "https://unpkg.com/three@v0.162.0/examples/jsm/"
+                }
+            }
+        </script>
+		<script type="module" src="src/main.js"></script>
+	</body>
+</html>
