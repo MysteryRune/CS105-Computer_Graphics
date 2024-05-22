@@ -1,4 +1,4 @@
-# :globe_with_meridians: [Vie](../)
+# :globe_with_meridians: [Vie](../lab_05/)
 [return](../lab_05/)
 
 Mục tiêu của bài lab này là `Phát hiện khuôn mặt` với sự hỗ trợ của thư viên `OpenCV`. Ngon ngữ lập trình chính ở đây là `Python` và giao diện hỗ trợ của `OpenCV`.
