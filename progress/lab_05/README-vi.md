@@ -12,6 +12,7 @@ Mục tiêu của bài lab này là `Phát hiện khuôn mặt` với sự hỗ 
 6. Cài đặt các thư viện cần thiết với lệnh **`pip install -r requirements.txt`**.
 7. Chạy chương trình bằng lệnh sau **`py lab_05.py`**.
 8. Để thoát chương trình, nhấn phím `ESC`.
+9. Để hủy kích hoạt môi trường ảo, sử dụng lệnh **`.venv\Scripts\deactivate.bat`**
 
 ###### Các bước hướng dẫn cài đặt Demo của `lab_05` nếu sử dụng với sự hỗ trợ của `Google Colab`:
 1. Tìm và tải file `lab_05.ipynb`.
