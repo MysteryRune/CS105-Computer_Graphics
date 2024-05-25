@@ -1,7 +1,7 @@
 # :globe_with_meridians: [Vie](../lab_05/)
 [return](../lab_05/)
 
-Mục tiêu của bài lab này là `Phát hiện khuôn mặt` với sự hỗ trợ của thư viên `OpenCV`. Ngon ngữ lập trình chính ở đây là `Python` và giao diện hỗ trợ của `OpenCV`.
+Mục tiêu của bài lab này là `Phát hiện khuôn mặt` với sự hỗ trợ của thư viên `OpenCV`. Ngôn ngữ lập trình chính ở đây là `Python` và giao diện hỗ trợ của `OpenCV`.
 
 ###### Các bước hướng dẫn cài đặt Demo của `lab_05` nếu sử dụng trực tiếp trên Máy cá nhân:
 1. Đảm bảo đã cài đặt ngôn ngữ `Python`, và phiên bản `Python` được sử dụng là `3.8.9`. Nếu chưa cài đặt có thể cài đặt `Python 3.8.9` thông qua các link sau từ trang web chính chủ của `Python` ([64-bit](https://www.python.org/ftp/python/3.8.9/python-3.8.9-amd64.exe), [32-bit](https://www.python.org/ftp/python/3.8.9/python-3.8.9.exe)).
