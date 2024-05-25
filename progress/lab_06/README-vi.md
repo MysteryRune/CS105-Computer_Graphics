@@ -28,3 +28,7 @@ Bài lab này có GUI để người dùng Demo có thể thao tác lựa chọn
 7. Chạy chương trình bằng lệnh sau **`py lab_06.py`**.
 8. Để thoát chương trình, nhấn phím `ESC`.
 9. Để hủy kích hoạt môi trường ảo, sử dụng lệnh **`.venv\Scripts\deactivate.bat`**
+
+## Tham khảo
+- [node-opencv](https://github.com/peterbraden/node-opencv/tree/master)
+- [Vehicle Detection with Haar Cascades](https://github.com/andrewssobral/vehicle_detection_haarcascades/tree/master)
