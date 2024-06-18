@@ -1,0 +1,13 @@
+// Created by Tree IT
+newmtl tropical_plants01
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+map_Kd tropical_plants01.png
+
+newmtl tropical_plants02
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+map_Kd tropical_plants02.png
+

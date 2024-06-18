@@ -1,0 +1,19 @@
+// Created by Tree IT
+newmtl stem 02
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+map_Kd stem 02.png
+
+newmtl fern leaf 01
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+map_Kd fern leaf 01.png
+
+newmtl fern leaf 02
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+map_Kd fern leaf 02.png
+

@@ -1,0 +1,12 @@
+newmtl bark02
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+map_Kd bark02.png
+
+newmtl branch04
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+map_Kd branch04.png
+
